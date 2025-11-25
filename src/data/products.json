@@ -1,0 +1,92 @@
+    [
+        {
+            "id": 1,
+            "name": "Gatos Guatones",
+            "description": "Gatos personalizados.",
+            "imageUrl": "/images/taza.jpg",
+            "price": 60.00,
+            "category": "Munecos",
+            "available": true
+        },
+        {
+            "id": 2,
+            "name": "Pinguinos Adorables",
+            "description": "Pinguinos de estambre.",
+            "imageUrl": "/images/taza.jpg",
+            "price": 60.00,
+            "category": "Munecos",
+            "available": true
+        },
+        {
+            "id": 3,
+            "name": "Perros Felices",
+            "description": "Perros de peluche.",
+            "imageUrl": "/images/taza.jpg",
+            "price": 60.00,
+            "category": "Munecos",
+            "available": true
+        },
+        {
+            "id": 4,
+            "name": "Pollos Divertidos",
+            "description": "Pollos de estambre.",
+            "imageUrl": "/images/taza.jpg",
+            "price": 60.00,
+            "category": "Munecos",
+            "available": true
+        },
+        {
+            "id": 5,
+            "name": "Osos Cariñosos",
+            "description": "Osos de peluche.",
+            "imageUrl": "/images/taza.jpg",
+            "price": 60.00,
+            "category": "Munecos",
+            "available": true
+        },
+        {
+            "id": 6,
+            "name": "Ranas Saltarinas",
+            "description": "Ranas de estambre.",
+            "imageUrl": "/images/taza.jpg",
+            "price": 60.00,
+            "category": "Munecos",
+            "available": true
+        },
+        {
+            "id": 7,
+            "name": "Conejos Alegres",
+            "description": "Conejos de peluche.",
+            "imageUrl": "/images/taza.jpg",
+            "price": 60.00,
+            "category": "Munecos",
+            "available": true
+        },        
+        {
+            "id": 8,
+            "name": "Tortugas Tranquilas",
+            "description": "Tortugas de estambre.",
+            "imageUrl": "/images/taza.jpg",
+            "price": 60.00,
+            "category": "Munecos",
+            "available": true
+        },
+        {
+            "id": 9,
+            "name": "Snoopy Encantador",
+            "description": "Snoopy Encantador",
+            "imageUrl": "/images/taza.jpg",
+            "price": 360.00,
+            "category": "Munecos",
+            "available": true
+        },
+        {
+            "id": 10,
+            "name": "Flores Coloridas",
+            "description": "Flores Coloridas",
+            "imageUrl": "/images/taza.jpg",
+            "price": 100.00,
+            "category": "Munecos",
+            "available": true
+        }
+    ]
