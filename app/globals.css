@@ -22,8 +22,9 @@
 }
 
 .mainPage {
-  background: #060629;
-  background: linear-gradient(0deg, rgba(6, 6, 41, 1) 27%, rgba(7, 43, 66, 1) 100%);
+  /* background: #060629;
+  background: linear-gradient(0deg, rgba(6, 6, 41, 1) 27%, rgba(7, 43, 66, 1) 100%); */
+  background-color: #FFFAF0
 }
 
 body {

@@ -5,42 +5,56 @@ import Image from "next/image";
 import { ProductImg } from "./productImg";
 import { Product } from "@/src/interfaces/product";
 import { BiCartAdd } from "react-icons/bi";
+import cartStore from "@/src/store/cartStore";
+
 
 export function ProductCard({ product }: { product: Product }) {
     const [openImg, setOpenImg] = useState(false);
 
+    const addToCart = cartStore((state) => state.addToCart);
+
+    const handleAddToCart = () => {
+        addToCart(product);
+    };
+
     return (
         <>
-            {/* bg-radial-[at_25%_25%] from-teal-400 to-zinc-400 to-100% */}
-            <div className="bg-gray-200 rounded-2xl overflow-hidden inset-shadow-sm inset-shadow-black  ">
+            <div className="bg-[#faffff] rounded-2xl overflow-hidden inset-shadow-sm inset-shadow-black  ">
                 <ProductImg product={product} onClick={() => setOpenImg(true)} />
 
-                <div className="p-4 bg-radial-[at_15%_25%] from-blue-950 to-blue-800 to-100% ">
-                    <div className="flex justify-items-start items-center gap-8" >
-                        <div>
-                            <h2 className="text-xl font-semibold text-white">
+                <div className="p-4 bg-[#869b82] ">
+                    <div className="flex justify-between items-start gap-4" >
+                        <div className="flex-1">
+                            <h2 className="text-xl font-semibold text-black">
                                 {product.name}
                             </h2>
 
-                            <p className="text-white font-bold mt-1">
+                            <p className="text-black font-bold mt-1">
                                 {product.description}
                             </p>
                         </div>
-
-                        < BiCartAdd size={'40px'} />
+                        <button
+                            className="cursor-pointer hover:scale-110 transition-transform shrink-0"
+                            onClick={handleAddToCart}
+                            title="Añadir al carrito"
+                        >
+                            <BiCartAdd size={'40px'} className="text-white hover:text-yellow-300" />
+                        </button>
                     </div>
 
 
 
-                    <div className="flex justify-between items-center mt-4 gap-2">
-                        <span className="text-xl font-bold text-green-600">
-                            ${product.price.toFixed(2)}
-                            <span className="text-xs">MXN</span>
-                        </span>
+                    <div className="flex justify-between items-center mt-4 flex-wrap">
+                        <div className="flex flex-col">
+                            <span className="text-xl font-bold text-white">
+                                ${product.price.toFixed(2)}
+                                <span className="text-xs">MXN</span>
+                            </span>
 
-                        <span className="text-white font-bold">
-                            Disponibles:{product.stock}
-                        </span>
+                            <span className="text-black font-bold">
+                                Disponibles:{product.stock}
+                            </span>
+                        </div>
 
                         <a
                             href={`https://wa.me/2284912196?text=${encodeURIComponent(
@@ -48,7 +62,7 @@ export function ProductCard({ product }: { product: Product }) {
                             )}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition"
+                            className="bg-green-500 hover:bg-green-300 text-black font-bold py-2 px-4 rounded-lg transition"
                         >
                             WhatsApp
                         </a>
@@ -74,3 +88,4 @@ export function ProductCard({ product }: { product: Product }) {
         </>
     );
 }
+
